@@ -38,7 +38,6 @@ def main():
 
   dataJson.close()
 
-  
 
 if __name__ == "__main__":
   main()
