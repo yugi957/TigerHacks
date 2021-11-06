@@ -1,0 +1,200 @@
+FORMAT: 1A
+HOST: http://ephemeris.kibo.cz/api/v1
+
+# Ephemeris API
+
+Ephemeris API is a simple API allowing consumers to get planets and cusps positions.
+
+**Planets**:
+
+Sun, Moon, Mercury, Venus, Mars, Jupiter, Saturn, Uranus, Neptune, Pluto, Chiron, Lilith, NNode.
+
+**House systems**:
+
+Placidus, Koch, Porphyrius, Regiomontanus, Campanus, Equal, Vehlow Equal, Whole, Axial Rotation, Horizontal, Polich/Page, Alcabitius, Gauquelin sectors, Morinus.
+
+**Coordinate systems**
+
+Geocentric, Topocentric.
+
+**Zodiac type**
+
+Tropical, Sidereal (Fagan Bradley, Lahiri, Deluce, Ramanb, Ushashashi, Krishnamurti, Djwhal Khul, Yukteshwar, Jn Bhasin, Babyl Kugler 1, Babyl Kugler 2, Babyl Kugler 3, Babyl Huber, Babyl Etpsc, Aldebaran 10Tau, Hipparchos, Sassanian)
+
+## Planets [/planets]
+
+### Planets [POST]
+This action returns a planet position and planet speed.
+
++ Request (application/json)
+    
+    + Headers 
+        
+            Accept: application/json
+            
+    + Body
+
+            { 
+                "event": "YYYYMMDDhhmmss", 
+                "planets": ["Sun", "Moon"],
+                "topo": [ longitude, latitude, geoalt],
+                "zodiac": "sidereal mode name"
+            }
+            
+    + Schema
+            
+            {
+                "type": "object",
+                "properties": {
+                    "event": {
+                        "type": "string",
+                        "description": "The date and time in UT",
+                    },
+                    "planets": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        },
+                    },
+                    "topo": {
+                        "type": "array",
+                        "description": "Only for the topocentric coordinate system.",
+                        "items": {
+                            "type": "double"
+                        }
+                    },
+                    "zodiac": {
+                        "type": "string"
+                        "description": "Only for the sidereal mode.",
+                    },
+                },
+                "required": ["event", "planets"]
+            }
+
++ Response 200 (application/json)
+
+        {
+            "planets":{ "Moon":[250.1, 1.0], "Sun":[25.1, 2.0]}
+        }
+
+## Cusps [/cusps]
+
+### Cusps [POST]
+This action returns a cusps positions.
+
++ Request (application/json)
+    
+    + Headers 
+        
+            Accept: application/json
+            
+    + Body
+
+            { 
+                "event": "YYYYMMDDhhmmss", 
+                "houses": "The houses sytem name",
+                "topo": [ longitude, latitude, geoalt],
+                "zodiac": "sidereal mode name"
+            }
+            
+    + Schema
+            
+            {
+                "type": "object",
+                "properties": {
+                    "event": {
+                        "type": "string",
+                        "description": "The date and time in UT",
+                    },
+                    "houses": {
+                        "type": "string",
+                        "description": "the name of the house system",
+                    },
+                    "topo": {
+                        "type": "array",
+                        "description": "Only for the topocentric coordinate system.",
+                        "items": {
+                            "type": "double"
+                        }
+                    },
+                    "zodiac": {
+                        "type": "string"
+                        "description": "Only for the sidereal mode.",
+                    },
+                },
+                "required": ["event", "houses"]
+            }
+
++ Response 200 (application/json)
+
+        {
+            "cusps":[296.1, 350.1, 30.1, 56.2, 75.3, 94.0, 116.4, 170.1, 210.5, 236.8, 255.9, 274.0]
+        }
+
+## Transit [/transit]
+
+### transit [POST]
+This action returns the time of transit. The time of the transit is in Universal Time (UT).
+
++ Request (application/json)
+    
+    + Headers 
+        
+            Accept: application/json
+            
+    + Body
+
+            { 
+                "event": "YYYYMMDDhhmmss", 
+                "planet": "Moon",
+                "toPlanet": "Sun",
+                "topo": [ longitude, latitude, geoalt],
+                "zodiac": "sidereal mode name",
+                "backwards":true
+            }
+            
+    + Schema
+            
+            {
+                "type": "object",
+                "properties": {
+                    "event": {
+                        "type": "string",
+                        "description": "The date and time in UT",
+                    },
+                    "planet": {
+                        "type": "string",
+                        "description": "The transiting planet name",
+                    },
+                    "toPlanet": {
+                        "type": "string",
+                        "description": "The second planet that will be transited by the first planet. It is possible set toPoint or toPlanet. Not both together.",
+                    },
+                    "point": {
+                        "type": "double",
+                        "description": "The desired transit degree. It is possible set toPoint or toPlanet. Not both together.",
+                    },
+                    "topo": {
+                        "type": "array",
+                        "description": "Only for the topocentric coordinate system.",
+                        "items": {
+                            "type": "double"
+                        }
+                    },
+                    "zodiac": {
+                        "type": "string"
+                        "description": "Only for the sidereal mode.",
+                    },
+                    "backwards": {
+                        "type": "boolean"
+                        "description": "Backwards transit calculation.",
+                    },
+                },
+                "required": ["event", "planet | point"]
+            }
+
++ Response 200 (application/json)
+
+        {
+            "transit":"YYYYMMDDhhmmss"
+        }
