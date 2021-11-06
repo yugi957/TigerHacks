@@ -18,14 +18,6 @@ localSystem = {"name":[], "temp":[], "mass":[], "volume":[], "density":[], "grav
 data = []
 
 for planet in bodies:
-    '''print("Name: {name}, AvgTemp: {temp}, Mass: {mass}, Volume: {volume}, Density: {density}, Gravity: {gravity}".format(
-        name=planet["englishName"],
-        temp=planet["avgTemp"],
-        mass=planet["mass"],
-        volume=planet["vol"],
-        density=planet["density"],
-        gravity=planet["gravity"]
-    ))'''
     if(planet["isPlanet"]==True):
         item = {"name": planet["englishName"], 
             "temp": planet["avgTemp"],
