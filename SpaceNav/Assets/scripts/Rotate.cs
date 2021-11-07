@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class Rotate : MonoBehaviour
 {
-
-    private float waitTime = 2.0f;
-
+    //365.26
+    private float revolutionPD = 360/365.26f;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,9 +16,14 @@ public class Rotate : MonoBehaviour
     void Update()
     {
     
+
+        
         Vector3 point = new Vector3(0,0,0);
         Vector3 axis = new Vector3(0,0,1);
-        transform.RotateAround(point, axis, Time.deltaTime * 35);
+        transform.RotateAround(point, axis, Time.deltaTime * revolutionPD);
+
+
+
 
     }
 }
