@@ -5,7 +5,7 @@ SpaceNav is an interactive game that displays the planets in the Solar System an
 We hope that our project inspires future generations to explore the cosmos.
 
 To run our project, go to [spacenav.tech](http://spacenav.tech).
-There is a link to an exe file which contains our Unity project.
+There is a link to an exe file which contains our Unity project. The exe file is SpaceNav.exe
 Be sure to run the project on Windows.
 
-To find the exe file on GitHub, start from the main branch and go to the folder Complete Build.
+To find SpaceNav.exe on GitHub, start from the main branch and go to the folder Complete Build.
