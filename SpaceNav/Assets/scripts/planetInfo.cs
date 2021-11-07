@@ -99,12 +99,12 @@ public class planetInfo : MonoBehaviour
                     currentPlanet = planetList[i];
                 }
             }
-            text.text = currentPlanet.name + "\nTemperature: " + currentPlanet.temp + "\nMass: " + Math.Round(currentPlanet.mass.massValue, 2) + "x10^" + currentPlanet.mass.massExponent + "\nGravity: " + currentPlanet.gravity
-            + "\nDiscovered By: StL. Bread Co \n" + "in 1980";
+            text.text = currentPlanet.name + "\nTemperature: " + currentPlanet.temp + "K\nMass: " + Math.Round(currentPlanet.mass.massValue, 2) + "x10^" + currentPlanet.mass.massExponent + "kg\nGravity: " + currentPlanet.gravity
+            + "m/s^2\nDiscovered By: StL. Bread Co \n" + "in 1980";
         }
         else
         {
-            text.text = currentPlanet.name + "\nTemperature: " + currentPlanet.temp + "\nMass: " + Math.Round(currentPlanet.mass.massValue, 2) + "x10^" + currentPlanet.mass.massExponent + "\nGravity: " + currentPlanet.gravity
+            text.text = currentPlanet.name + "\nTemperature: " + currentPlanet.temp + "K\nMass: " + Math.Round(currentPlanet.mass.massValue, 2) + "x10^" + currentPlanet.mass.massExponent + "kg\nGravity: " + currentPlanet.gravity
             + "\nDiscovered By: " + currentPlanet.discoveredBy + "\non " + currentPlanet.discoveryDate;
         }
     }
@@ -149,13 +149,13 @@ public class planetInfo : MonoBehaviour
                     currentPlanet = obj;
                 }
             }
-            text.text = currentPlanet.name + "\nTemperature: " + currentPlanet.temp + "\nMass: " + Math.Round(currentPlanet.mass.massValue, 2) + "x10^" + currentPlanet.mass.massExponent + "\nGravity: " + currentPlanet.gravity
-            + "\nDiscovered By: StL. Bread Co \n" + "in 1980";
+            text.text = currentPlanet.name + "\nTemperature: " + currentPlanet.temp + " K\nMass: " + Math.Round(currentPlanet.mass.massValue, 2) + "x10^" + currentPlanet.mass.massExponent + " kg\nGravity: " + currentPlanet.gravity
+            + " m/s^2\nDiscovered By: StL. Bread Co \n" + "in 1980";
         }
         else
         {
-            text.text = currentPlanet.name + "\nTemperature: " + currentPlanet.temp + "\nMass: " + Math.Round(currentPlanet.mass.massValue, 2) + "x10^" + currentPlanet.mass.massExponent + "\nGravity: " + currentPlanet.gravity
-            + "\nDiscovered By: " + currentPlanet.discoveredBy + "\non " + currentPlanet.discoveryDate;
+            text.text = currentPlanet.name + "\nTemperature: " + currentPlanet.temp + " K\nMass: " + Math.Round(currentPlanet.mass.massValue, 2) + "x10^" + currentPlanet.mass.massExponent + " kg\nGravity: " + currentPlanet.gravity
+            + " m/s^2\nDiscovered By: " + currentPlanet.discoveredBy + "\non " + currentPlanet.discoveryDate;
         }
     }
 }
