@@ -1,0 +1,9 @@
+/Users/cameron/Documents/GitHub/TigerHacks/API_Data/API/API/bin/Debug/API.exe
+/Users/cameron/Documents/GitHub/TigerHacks/API_Data/API/API/bin/Debug/API.pdb
+/Users/cameron/Documents/GitHub/TigerHacks/API_Data/API/API/bin/Debug/Newtonsoft.Json.dll
+/Users/cameron/Documents/GitHub/TigerHacks/API_Data/API/API/bin/Debug/Newtonsoft.Json.xml
+/Users/cameron/Documents/GitHub/TigerHacks/API_Data/API/API/obj/Debug/API.csproj.AssemblyReference.cache
+/Users/cameron/Documents/GitHub/TigerHacks/API_Data/API/API/obj/Debug/API.csproj.CoreCompileInputs.cache
+/Users/cameron/Documents/GitHub/TigerHacks/API_Data/API/API/obj/Debug/API.csproj.CopyComplete
+/Users/cameron/Documents/GitHub/TigerHacks/API_Data/API/API/obj/Debug/API.exe
+/Users/cameron/Documents/GitHub/TigerHacks/API_Data/API/API/obj/Debug/API.pdb
