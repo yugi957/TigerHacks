@@ -73,7 +73,6 @@ namespace DeserializeFromFile
                 {
                     yield return serializer.Deserialize<T>(jsonreader);
                 }
-
             }
         }
 
@@ -108,10 +107,13 @@ namespace DeserializeFromFile
                 }
             }
 
-            foreach(var planet in planetList)
+            string json = JsonConvert.SerializeObject(planetList);
+            System.IO.File.WriteAllText(@"/Users/cameron/Documents/GitHub/TigerHacks/API_Data/planetdata.json", json);
+
+            /*foreach(var planet in planetList)
             {
                 Console.WriteLine(planet.name + planet.temp);
-            }
+            }*/
 
             /*foreach (string planet in deserialized)
             {

@@ -1,7 +1,8 @@
 ﻿<Properties StartupConfiguration="{41C224D6-6C5E-4613-A9DA-51785E6EE8EA}|Default">
   <MonoDevelop.Ide.Workbench ActiveDocument="API/Program.cs">
     <Files>
-      <File FileName="API/Program.cs" Line="51" Column="15" />
+      <File FileName="../../SpaceNav/Assets/scripts/planetInfo.cs" Line="12" Column="1" />
+      <File FileName="API/Program.cs" Line="113" Column="14" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
