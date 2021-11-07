@@ -18,7 +18,7 @@ public class sus : MonoBehaviour
 
         //ROTATION LOGIC
         Vector3 point = GameObject.FindGameObjectWithTag("red").transform.position;
-        Vector3 axis = new Vector3(0, 0, 1);
+        Vector3 axis = new Vector3(0,0,1);
         transform.RotateAround(point, axis, Time.deltaTime * 35);
     }
 }
