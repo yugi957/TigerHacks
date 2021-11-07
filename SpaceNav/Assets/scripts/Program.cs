@@ -75,13 +75,14 @@ namespace DeserializeFromFile
                 }
             }
         }
-        
+
         public static void Main()
-        { 
+        {
+
             //string fileName = "data.json";
             var jsonString = File.ReadAllText(@"/Users/cameron/Documents/GitHub/TigerHacks/API_Data/data.json");
             //Root myDeserializedClass = JsonConvert.DeserializeObject<Root>(jsonString);
-        
+            
 
             // Array of planet names that we need to get from the json file
             string[] localPlanets = { "Earth", "Venus", "Mars", "Mercury", "Saturn", "Neptune", "Uranus", "Pluto", "Jupiter" };
@@ -106,6 +107,9 @@ namespace DeserializeFromFile
                 }
             }
 
+            string json = JsonConvert.SerializeObject(planetList);
+            System.IO.File.WriteAllText(@"/Users/cameron/Documents/GitHub/TigerHacks/API_Data/planetdata.json", json);
+
             /*foreach(var planet in planetList)
             {
                 Console.WriteLine(planet.name + planet.temp);
@@ -113,16 +117,15 @@ namespace DeserializeFromFile
 
             /*foreach (string planet in deserialized)
             {
-                Console.WriteLine(planet);
-                if (localPlanets.Contains((string)planet["name"]))
-                {
+              Console.WriteLine(planet);
+              if (localPlanets.Contains((string)planet["name"]))
+              {
                 planets.Add("name");
-                }
+              }
             }*/
         }
     }
 }
-
 // output:
 //Date: 8/1/2019 12:00:00 AM -07:00
 //TemperatureCelsius: 25
