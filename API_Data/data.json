@@ -276,7 +276,7 @@
                 "rel": "https://api.le-systeme-solaire.net/rest/bodies/hippocampe"
             }
         ],
-        "discoveredBy": "Urbain Le Verrier, John Couch Adams, Johann Galle",
+        "discoveredBy": "Urbain Le Verrier",
         "discoveryDate": "23/09/1846",
         "radius": 24622.0
     },
@@ -661,8 +661,8 @@
                 "rel": "https://api.le-systeme-solaire.net/rest/bodies/ersa"
             }
         ],
-        "discoveredBy": "",
-        "discoveryDate": "",
+        "discoveredBy": "Galileo Galilei",
+        "discoveryDate": "1610",
         "radius": 69911.0
     },
     {
@@ -688,8 +688,8 @@
                 "rel": "https://api.le-systeme-solaire.net/rest/bodies/deimos"
             }
         ],
-        "discoveredBy": "",
-        "discoveryDate": "",
+        "discoveredBy": "Galileo Galilei",
+        "discoveryDate": "1610",
         "radius": 3389.5
     },
     {
@@ -706,8 +706,8 @@
         "density": 5.4291,
         "gravity": 3.7,
         "moons": null,
-        "discoveredBy": "",
-        "discoveryDate": "",
+        "discoveredBy": "Galileo Galilei",
+        "discoveryDate": "1610",
         "radius": 2439.4
     },
     {
@@ -1053,8 +1053,8 @@
                 "rel": "https://api.le-systeme-solaire.net/rest/bodies/s2004s39"
             }
         ],
-        "discoveredBy": "",
-        "discoveryDate": "",
+        "discoveredBy": "Galileo Galilei",
+        "discoveryDate": "1610",
         "radius": 58232.0
     },
     {
@@ -1094,7 +1094,7 @@
         "density": 5.243,
         "gravity": 8.87,
         "moons": null,
-        "discoveredBy": "",
-        "discoveryDate": "",
+        "discoveredBy": "People with eyes",
+        "discoveryDate": "A long time ago, in a galaxy... well here",
         "radius": 6051.8
     }

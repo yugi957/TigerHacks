@@ -92,12 +92,11 @@ public class planetInfo : MonoBehaviour
 
         if(sceneName == "EarthLanding")
         {
-            foreach (var obj in planetList)
+            for (int i = 0; i < planetList.Count(); i++)
             {
-                if (obj.name == "Earth")
+                if (planetList[i].name == sceneName)
                 {
-                    currentPlanet = obj;
-                    break;
+                    currentPlanet = planetList[i];
                 }
             }
             text.text = currentPlanet.name + "\nTemperature: " + currentPlanet.temp + "\nMass: " + Math.Round(currentPlanet.mass.massValue, 2) + "x10^" + currentPlanet.mass.massExponent + "\nGravity: " + currentPlanet.gravity
@@ -113,6 +112,50 @@ public class planetInfo : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        string jsonString = File.ReadAllText(@"C:\Atul\TigerHacks\TigerHacks\SpaceNav\Assets\scripts\data.json");
+        string[] localPlanets = { "Earth", "Venus", "Mars", "Mercury", "Saturn", "Neptune", "Uranus", "Pluto", "Jupiter" };
 
+        var planets = DeserializeObjects<Root>(jsonString).ToList();
+
+        List<Root> planetList = new List<Root>();
+
+        foreach (var planet in planets)
+        {
+            if (localPlanets.Contains(planet.name))
+            {
+                planetList.Add(planet);
+            }
+        }
+        text = GetComponent<Text>();
+        string sceneName = SceneManager.GetActiveScene().name;
+
+        Root currentPlanet = new Root();
+        Debug.Log("Pain");
+        //foreach (var obj in planetList)
+        for(int i=0; i<planetList.Count(); i++)   
+        {
+            if (planetList[i].name == sceneName)
+            {
+                currentPlanet = planetList[i];
+            }
+        }
+
+        if (sceneName == "EarthLanding")
+        {
+            foreach (var obj in planetList)
+            {
+                if (obj.name == "Earth")
+                {
+                    currentPlanet = obj;
+                }
+            }
+            text.text = currentPlanet.name + "\nTemperature: " + currentPlanet.temp + "\nMass: " + Math.Round(currentPlanet.mass.massValue, 2) + "x10^" + currentPlanet.mass.massExponent + "\nGravity: " + currentPlanet.gravity
+            + "\nDiscovered By: StL. Bread Co \n" + "in 1980";
+        }
+        else
+        {
+            text.text = currentPlanet.name + "\nTemperature: " + currentPlanet.temp + "\nMass: " + Math.Round(currentPlanet.mass.massValue, 2) + "x10^" + currentPlanet.mass.massExponent + "\nGravity: " + currentPlanet.gravity
+            + "\nDiscovered By: " + currentPlanet.discoveredBy + "\non " + currentPlanet.discoveryDate;
+        }
     }
 }
