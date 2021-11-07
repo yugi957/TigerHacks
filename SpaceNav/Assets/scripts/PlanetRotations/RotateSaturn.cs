@@ -2,10 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Rotate : MonoBehaviour
+public class RotateSaturn : MonoBehaviour
 {
     //365.26
-    private float revolutionPD = 360 / 29.456f;
+    private float revolutionPD = 360 / 10751.44f;
+    public float speed = 100;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,7 +21,7 @@ public class Rotate : MonoBehaviour
 
         Vector3 point = new Vector3(0, 0, 0);
         Vector3 axis = new Vector3(0, 0, 1);
-        transform.RotateAround(point, axis, Time.deltaTime * revolutionPD);
+        transform.RotateAround(point, axis, Time.deltaTime * revolutionPD * speed);
 
 
 
