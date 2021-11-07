@@ -155,6 +155,11 @@ public class planetInfo : MonoBehaviour
         else
         {
             text.text = currentPlanet.name + "\nTemperature: " + currentPlanet.temp + " K\nMass: " + Math.Round(currentPlanet.mass.massValue, 2) + "x10^" + currentPlanet.mass.massExponent + " kg\nGravity: " + currentPlanet.gravity
+            + " m/s^2\nDiscovered By: StL. Bread Co \n" + "in 1980";
+        }
+        else
+        {
+            text.text = currentPlanet.name + "\nTemperature: " + currentPlanet.temp + " K\nMass: " + Math.Round(currentPlanet.mass.massValue, 2) + "x10^" + currentPlanet.mass.massExponent + " kg\nGravity: " + currentPlanet.gravity
             + " m/s^2\nDiscovered By: " + currentPlanet.discoveredBy + "\non " + currentPlanet.discoveryDate;
         }
     }
