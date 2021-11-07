@@ -7,17 +7,18 @@ public class sus : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        gameObject.tag = "red";
     }
 
     // Update is called once per frame
     void Update()
     {
-        Vector3 horizontal = new Vector3(5f, 0.0f, 0.0f);
-        transform.position = transform.position + horizontal * Time.deltaTime * 35;
+        Vector3 horizontal = new Vector3(10, 0.0f, 0.0f);
+        transform.position = transform.position + horizontal * Time.deltaTime;
 
+
+        //ROTATION LOGIC
         Vector3 point = GameObject.FindGameObjectWithTag("red").transform.position;
-        Vector3 axis = GameObject.FindGameObjectWithTag("red").transform.position;
-        transform.RotateAround(point, axis, Time.deltaTime * 20);
+        Vector3 axis = new Vector3(0, 0, 1);
+        transform.RotateAround(point, axis, Time.deltaTime * 35);
     }
 }
