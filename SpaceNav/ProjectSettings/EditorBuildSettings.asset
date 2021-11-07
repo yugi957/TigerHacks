@@ -8,4 +8,31 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/EarthLanding.unity
+    guid: 9bb31eb96939dce40af3cd3b71cc5c3b
+  - enabled: 1
+    path: Assets/Scenes/Jupiter.unity
+    guid: d95eea8803352994cb4b56164edde0c2
+  - enabled: 1
+    path: Assets/Scenes/Mars.unity
+    guid: 989c2b0ea10f3624ab60b59819367c81
+  - enabled: 1
+    path: Assets/Scenes/Mercury.unity
+    guid: 354dedd455b40174fbd17648cc1f47c5
+  - enabled: 1
+    path: Assets/Scenes/Neptune.unity
+    guid: c63c6bbb01d74d54db12f54e6fa1ed3a
+  - enabled: 1
+    path: Assets/Scenes/Pluto.unity
+    guid: 949c84fa1913b394cac6229358d8e1d7
+  - enabled: 1
+    path: Assets/Scenes/Saturn.unity
+    guid: 2d14a7b88f286f747a04933e09bb97a3
+  - enabled: 1
+    path: Assets/Scenes/Uranus.unity
+    guid: 93101f1a248152c40bcf65208b3f097f
+  - enabled: 1
+    path: Assets/Scenes/Venus.unity
+    guid: 26fff5f14ccf28745a88cb3a0c9753ed
   m_configObjects: {}
